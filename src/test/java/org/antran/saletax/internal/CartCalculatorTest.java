@@ -1,15 +1,12 @@
 package org.antran.saletax.internal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.antran.saletax.api.Categories;
 import org.antran.saletax.api.ICart;
 import org.antran.saletax.api.IReceiptMaker;
 import org.antran.saletax.api.Receipt;
-import org.antran.saletax.internal.Amount;
-import org.antran.saletax.internal.Cart;
-import org.antran.saletax.internal.TotalCartCalculator;
-import org.antran.saletax.internal.Product;
 import org.junit.Test;
 
 public class CartCalculatorTest

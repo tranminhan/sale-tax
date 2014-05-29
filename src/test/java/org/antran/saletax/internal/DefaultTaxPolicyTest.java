@@ -23,11 +23,11 @@ public class DefaultTaxPolicyTest
                 ));
         
         // then
-        ICartItem itemOf_1 = new CartItem(new Product("10.00", Categories.FOOD, true), 1);
-        assertEquals(new Amount("0.00"), defaultTaxPolicy.tax(itemOf_1));
+        ICartItem nonTaxableItemOf_1 = new CartItem(new Product("10.00", Categories.FOOD, true), 1);
+        assertEquals(new Amount("0.00"), defaultTaxPolicy.tax(nonTaxableItemOf_1));
         
-        ICartItem itemOf_2 = new CartItem(new Product("10.00", Categories.FOOD, true), 2);
-        assertEquals(new Amount("0.00"), defaultTaxPolicy.tax(itemOf_2));
+        ICartItem nonTaxableItemOf_2 = new CartItem(new Product("10.00", Categories.FOOD, true), 2);
+        assertEquals(new Amount("0.00"), defaultTaxPolicy.tax(nonTaxableItemOf_2));
         
         ICartItem taxableItemOf_1 = new CartItem(new Product("10.00", Categories.OTHER, true), 1);
         assertEquals(new Amount("1.00"), defaultTaxPolicy.tax(taxableItemOf_1));
